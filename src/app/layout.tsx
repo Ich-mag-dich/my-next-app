@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <meta
           name="theme-color"
@@ -25,10 +25,10 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
         />
       </head>
-      <body className="bg-white dark:bg-slate-800 text-slate-800 dark:text-white dark:border-gray-800">
+      <body className="font-mono bg-white dark:bg-slate-800 text-slate-800 dark:text-white dark:border-gray-800 h-full">
         <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-800">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="https://flowbite.com/docs/images/logo.svg"
                 className="h-8 mr-3 w-auto"
@@ -39,7 +39,7 @@ export default function RootLayout({
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Next App
               </span>
-            </a>
+            </Link>
             <button
               data-collapse-toggle="navbar-default"
               type="button"
