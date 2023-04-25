@@ -160,7 +160,7 @@ function WeatherDiv(props: IWeatherProps) {
 
       <div className="divBox">
         <div className="inBoxDiv">
-          <Image alt="" className="icons" src={"icon/temp.svg"} />
+          <Image alt="" className="icons" src={"../icon/temp.svg"} />
           <span className="inSpan" style={marginAutoLeft}>
             <span className="ininSpan">
               {" "}
@@ -174,21 +174,21 @@ function WeatherDiv(props: IWeatherProps) {
         </div>
 
         <div className="inBoxDiv">
-          <Image alt="" className="icons" src={"icon/humidity.svg"} />
+          <Image alt="" className="icons" src={"../icon/humidity.svg"} />
           <span className="inSpan">
             {weather?.current?.humidity}
             <span className="ininSpan">Humidity</span>
           </span>
         </div>
         <div className="inBoxDiv">
-          <Image alt="" className="icons" src={"icon/wind.svg"} />
+          <Image alt="" className="icons" src={"../icon/wind.svg"} />
           <span className="inSpan">
             {weather?.current?.wind_speed}
             <span className="ininSpan">Wind Speed</span>
           </span>
         </div>
         <div className="inBoxDiv">
-          <Image alt="" className="icons" src={"icon/pressure.svg"} />
+          <Image alt="" className="icons" src={"../icon/pressure.svg"} />
           <span className="inSpan">
             {weather?.current?.pressure}
             <span className="ininSpan">Pressure</span>
