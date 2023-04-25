@@ -8,7 +8,9 @@ export default function Home() {
     desc: string;
     stat: boolean;
   }
+
   const [todos, setTodos] = useState<interfaceTodolist[]>();
+
   () => {
     if (!todos) {
       if (localStorage.getItem("todos") !== null) {
@@ -18,6 +20,7 @@ export default function Home() {
       }
     }
   };
+
   const add = (t: any) => {
     if (t.target.inputText.value !== "") {
       let localdata: any = [];
@@ -50,7 +53,9 @@ export default function Home() {
     }
     // console.log(localStorage.getItem("todos"));
   };
+
   var lgs: any;
+
   const set_number = (i: interfaceTodolist) => {
     setTodos(
       todos?.map(x => {
@@ -61,18 +66,22 @@ export default function Home() {
       })
     );
   };
+
   const del = (i: interfaceTodolist) => {
     if (todos !== undefined) {
       setTodos(todos.splice(i.ind - 1, 1));
     }
   };
+
   const alert_length = () => {
     console.log(todos);
     console.log(todos?.length);
   };
+
   const handleOnClick = (e: any, x: interfaceTodolist) => {
     del(x);
     set_number(x);
+
     if (todos !== undefined) {
       localStorage.setItem("todos", JSON.stringify(todos));
     } else {
@@ -83,6 +92,7 @@ export default function Home() {
       } else {
         // console.log("qqqqqqqqqq");
         let qq: any = [];
+
         JSON.parse(localStorage.getItem("todos")!).map((i: any, w: any) => {
           if (i.ind !== x.ind) {
             // console.log("asd\n", i, x);
@@ -131,16 +141,19 @@ export default function Home() {
       </tr>;
     });
   }
+  // nextjs 온몸비틀기똥꼬쇼
   try {
     var lsg: any = localStorage.getItem("todos");
   } catch {
     var lsg: any;
   }
+
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     lsg = localStorage.getItem("todos");
     // console.log(lsg);
   }, []);
+
   return (
     <main>
       {/* <div className="text-center">
@@ -198,7 +211,7 @@ export default function Home() {
                       return (
                         <tr
                           key={x}
-                          className="text-gray-600 dark:text-indigo-100 bg-gray-100 border-indigo-200 dark:bg-gray-700 dark:border-none font-['D2 coding']"
+                          className="transition-all text-gray-600 dark:text-indigo-100 bg-gray-100 border-indigo-200 dark:bg-gray-700 dark:border-none font-['D2 coding']"
                         >
                           <td className="border-none px-4 py-2 dark:border-none">
                             {i.ind}
@@ -225,12 +238,12 @@ export default function Home() {
                           </td>
                           <td className="border-none px-2 py-2 dark:border-none text-[12px]">
                             <button
-                              className="bg-red-500 hover:bg-red-700 text-white  font-bold py-2 px-2 rounded"
+                              className="bg-red-500 hover:bg-red-700 text-white  font-bold py-1 px-2 rounded"
                               onClick={e => {
                                 handleOnClick(e, i);
                               }}
                             >
-                              Del
+                              X
                             </button>
                           </td>
                         </tr>

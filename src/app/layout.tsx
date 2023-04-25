@@ -110,7 +110,7 @@ export default function RootLayout({
                   </svg>
                 </g>
               </svg>
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white font-['Helvetica']">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white font-['Helvetica'] mt-1">
                 San02
               </span>
             </Link>
@@ -141,9 +141,9 @@ export default function RootLayout({
             </button>
             <div
               id="navbar-solid-bg"
-              className={`${visl} w-full md:block md:w-auto navbar-solid-bg`}
+              className={`${visl} w-full md:block md:w-auto navbar-solid-bg transition-all`}
             >
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 tracking-tighter">
                 <li>
                   <Link
                     href="/"
@@ -153,6 +153,7 @@ export default function RootLayout({
                     Home
                   </Link>
                 </li>
+                <p className="hidden md:block cursor-default">|</p>
                 <li>
                   <Link
                     href="/todo"
@@ -161,6 +162,7 @@ export default function RootLayout({
                     To do list
                   </Link>
                 </li>
+                <p className="hidden md:block cursor-default">|</p>
                 <li>
                   <Link
                     href="/weather"

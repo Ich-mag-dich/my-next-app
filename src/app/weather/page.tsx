@@ -13,6 +13,8 @@ import HeaderPage from "./components/HeaderPage";
 import TestinTest from "./components/TestinTest";
 import { Cookies, useCookies } from "react-cookie";
 
+// moved to weather component
+
 // type ObjType = {
 //   [index: string]: string;
 //   "01d": string;
@@ -55,6 +57,7 @@ import { Cookies, useCookies } from "react-cookie";
 //   "50d": "icon.cloudy.svg",
 //   "50n": "icon/cloudy-night.svg",
 // };
+
 const appid: string = "72dc22879afa657a9417a3eb73526904";
 const appid2: string = "94f4155f866dc90047fcbff89d108fe2";
 function App() {
@@ -212,5 +215,5 @@ function App() {
     );
   } catch {}
 }
-
+// Todo 하단 북마크 border 제거하기.
 export default App;
