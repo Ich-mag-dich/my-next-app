@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
+    "./node_modules/flowbite-react/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -17,5 +18,7 @@ module.exports = {
       'mono': ['monospace', 'ui-monospace', 'SFMono-Regular', 'D2 coding'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
