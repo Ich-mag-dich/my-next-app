@@ -200,13 +200,13 @@ export default function Home() {
                           key={x}
                           className="text-gray-600 dark:text-indigo-100 bg-indigo-100 border-indigo-200 dark:bg-gray-700 dark:border-none"
                         >
-                          <td className="border px-4 py-2 dark:border-none">
+                          <td className="border-none px-4 py-2 dark:border-none">
                             {i.ind}
                           </td>
-                          <td className="border px-4  py-2 text-left dark:border-none break-words max-w-[250px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[1000px]">
+                          <td className="border-none px-4  py-2 text-left dark:border-none break-words max-w-[250px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[1000px]">
                             {i.desc}
                           </td>
-                          <td className="border px-4 py-4 dark:border-none">
+                          <td className="border-none px-4 py-4 dark:border-none">
                             {/* <button>check</button> */}
                             <div className=" m-auto">
                               <input
@@ -223,7 +223,7 @@ export default function Home() {
                             </label> */}
                             </div>
                           </td>
-                          <td className="border px-2 py-2 dark:border-none text-[12px]">
+                          <td className="border-none px-2 py-2 dark:border-none text-[12px]">
                             <button
                               className="bg-red-500 hover:bg-red-700 text-white  font-bold py-2 px-2 rounded"
                               onClick={e => {
