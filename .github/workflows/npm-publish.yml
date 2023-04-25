@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd ~/dev/my-next-app
+            cd ~/devq/my-next-app
             sudo pm2 stop 0
             sudo git fetch --all
             sudo git reset --hard
