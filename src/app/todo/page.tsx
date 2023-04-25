@@ -139,7 +139,7 @@ export default function Home() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     lsg = localStorage.getItem("todos");
-    console.log(lsg);
+    // console.log(lsg);
   }, []);
   return (
     <main>
@@ -172,7 +172,7 @@ export default function Home() {
 
         <button
           type="submit"
-          className="mx-2.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="mx-2.5 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Add
         </button>
@@ -198,7 +198,7 @@ export default function Home() {
                       return (
                         <tr
                           key={x}
-                          className="text-gray-600 dark:text-indigo-100 bg-indigo-100 border-indigo-200 dark:bg-gray-700 dark:border-none"
+                          className="text-gray-600 dark:text-indigo-100 bg-gray-100 border-indigo-200 dark:bg-gray-700 dark:border-none font-['D2 coding']"
                         >
                           <td className="border-none px-4 py-2 dark:border-none">
                             {i.ind}
