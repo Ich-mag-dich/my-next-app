@@ -8,8 +8,12 @@ export default function Home() {
     <main>
       <h1 className="text-center mt-32">hello world!</h1>
       <div className="text-center">
-        <Link href="/todo">Click Me!</Link>
-        <Link href="/weather">Weather!</Link>
+        <div>
+          <Link href="/todo">Click Me!</Link>
+        </div>
+        <div>
+          <Link href="/weather">Weather!</Link>
+        </div>
       </div>
     </main>
   );
