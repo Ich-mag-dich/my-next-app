@@ -198,7 +198,7 @@ function App() {
                   return (
                     <div
                       key={i}
-                      className="fav"
+                      className="fav border-none"
                       onClick={e => handleOnClick(e, x)}
                     >
                       {x}
