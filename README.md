@@ -1,7 +1,23 @@
-# Getting Started
+# My next app
+
+그런데 이제 정적 빌드를 곁들인,,
+
+#### Install
+
+```bash
+git clone https://github.com/Ich-mag-dich/my-next-app.git
+cd my-next-app
+npm install
+```
+
+#### Dev
 
 ```bash
 pnpm dev
 ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Build
+
+```bash
+pnpm build && pnpm start
+```
