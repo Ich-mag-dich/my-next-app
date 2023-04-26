@@ -13,11 +13,12 @@ npm install
 #### Dev
 
 ```bash
-pnpm dev
+pnpm dev  # localhost:3000
 ```
 
 #### Build
 
 ```bash
 pnpm build && pnpm start
+# dist/ 폴더로 정적 빌드
 ```
