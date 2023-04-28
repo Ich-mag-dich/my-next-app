@@ -210,7 +210,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="focus:outline-none">
       {/* <div className="text-center">
         <button
           onClick={() => {
@@ -235,7 +235,7 @@ export default function Home() {
           <input
             type="text"
             name="inputText"
-            className="mx-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 py-2.5  sm:w-auto my-2.5 text-center p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mx-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  py-2.5  sm:w-auto my-2.5 text-center p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
             placeholder="Input text"
           />
         </div>
