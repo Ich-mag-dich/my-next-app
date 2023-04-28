@@ -42,7 +42,7 @@ export default function RootLayout({
         <title>San02</title>
       </head>
       <body className="font-mono bg-white dark:bg-slate-800 text-slate-800 dark:text-white dark:border-gray-800 h-full">
-        <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-800">
+        <nav className="bg-[#eaddff]  dark:bg-gray-900 dark:border-gray-800">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
               {/* <Image
@@ -152,11 +152,11 @@ export default function RootLayout({
               id="navbar-solid-bg"
               className={`${visl} w-full md:block md:w-auto navbar-solid-bg transition-all`}
             >
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 tracking-tighter">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#eaddff] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#eaddff] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 tracking-tighter">
                 <li>
                   <Link
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                     aria-current="page"
                   >
                     Home
@@ -166,7 +166,7 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/todo"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     To do list
                   </Link>
@@ -175,7 +175,7 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/weather"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >
                     Weather
                   </Link>

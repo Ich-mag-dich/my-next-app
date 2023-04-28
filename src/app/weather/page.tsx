@@ -163,11 +163,11 @@ function App() {
       </header> */}
         {
           <div className="mt-32">
-            <div className="box box3">
+            <div className="box box3 ">
               <p>
-                <code className="code">
+                <code className="code bg-[#D0BCFF]">
                   <a
-                    className="button btnPush btnLightBlue"
+                    className="button btnPush btnLightBlue bg-[#D0BCFF]"
                     onClick={() => {
                       setCity(undefined);
                       setWeather(undefined);
@@ -215,5 +215,4 @@ function App() {
     );
   } catch {}
 }
-// Todo 하단 북마크 border 제거하기.
 export default App;

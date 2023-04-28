@@ -48,7 +48,7 @@
   padding: 20px 10px;
   margin: auto;
   border-radius: 4px;
-  box-shadow: rgb(85 85 85) 0px 3px 6px 0px;
+  box-shadow: #d0bcff 0px 3px 6px 0px;
   background: white;
   font-family: Montserrat, source-code-pro, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -82,24 +82,24 @@ a.button {
     cursor: pointer;
   }
   a.btnLightBlue.btnPush:hover {
-    box-shadow: 0px 0px 0px 0px #b1b1b1;
+    box-shadow: 0px 0px 0px 0px #d0bcff;
   }
   .fav:hover {
     transition: 0.5s;
-    background-color: #cccccc;
+    background-color: #eaddff;
   }
   .clearBookmarks:hover {
     cursor: pointer;
-    background-color: #aaaaaa94;
+    background-color: #d0bcff;
   }
 }
 a.btnLightBlue.btnPush {
-  box-shadow: 0px 5px 0px 0px #b1b1b1;
+  box-shadow: 0px 5px 0px 0px #d0bcff;
 }
 a.btnLightBlue {
-  background: #e2e2e2;
+  background: #eaddff;
 }
-
+/* EADDFF */
 /* .fav {
   color: #353535;
   cursor: pointer;
@@ -132,7 +132,7 @@ a.btnLightBlue {
   padding-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #e2e2e2;
+  background: #eaddff;
   transition: all 0.2s;
   padding-top: 0px;
   padding-bottom: 0px;
