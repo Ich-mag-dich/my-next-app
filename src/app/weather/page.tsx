@@ -193,7 +193,7 @@ function App() {
             </div>
 
             {cookies.city.length !== 0 ? (
-              <div className="box box2">
+              <div className="box box2 mb-5">
                 {cookies.city.map((x: string, i: number) => {
                   return (
                     <div

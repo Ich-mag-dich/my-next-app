@@ -31,12 +31,12 @@ export default function RootLayout({
       <head>
         <meta
           name="theme-color"
-          content="#ffffff"
+          content="#eaddff"
           media="(prefers-color-scheme: light)"
         />
         <meta
           name="theme-color"
-          content="#ffffff"
+          content="#eaddff"
           media="(prefers-color-scheme: dark)"
         />
         <title>San02</title>
@@ -126,7 +126,7 @@ export default function RootLayout({
             <button
               data-collapse-toggle="navbar-solid-bg"
               type="button"
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none  dark:text-gray-400 "
               aria-controls="navbar-solid-bg"
               aria-expanded="false"
               onClick={() => {
