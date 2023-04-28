@@ -314,7 +314,7 @@ export default function Home() {
                             </div>
                           </div>
                           <button
-                            className="flex-grow-0 flex-shrink-0 w-[20px] h-[20px] rounded-sm bg-[#6750A4] p-[2px]"
+                            className="flex-grow-0 flex-shrink-0 w-[20px] h-[20px] rounded-sm bg-[#6750A4] p-[2px] text-center"
                             onClick={e => {
                               handleOnClick(e, i);
                               handleChange();
