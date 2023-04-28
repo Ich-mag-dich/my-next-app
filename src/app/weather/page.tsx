@@ -157,7 +157,7 @@ function App() {
   };
   try {
     return (
-      <div className="App" style={{ opacity: opacityNum }}>
+      <div className="App mb-[200px]" style={{ opacity: opacityNum }}>
         {/* <header className="App-header">
         <HeaderPage></HeaderPage>
       </header> */}
@@ -193,7 +193,7 @@ function App() {
             </div>
 
             {cookies.city.length !== 0 ? (
-              <div className="box box2 mb-5">
+              <div className="box box2 mb-[200px]">
                 {cookies.city.map((x: string, i: number) => {
                   return (
                     <div
@@ -207,7 +207,7 @@ function App() {
                 })}
               </div>
             ) : (
-              <div className="box4"></div>
+              <div className="box4 mb-[200px]"></div>
             )}
           </div>
         }

@@ -287,7 +287,7 @@ export default function Home() {
                         <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 min-h-[56px] gap-4 pl-4 pr-6 py-2">
                           <div className="flex flex-col justify-center items-start flex-grow-0 flex-shrink-0 relative overflow-hidden">
                             <div className="flex-grow-0 flex-shrink-0 w-10 h-10 relative overflow-hidden rounded-[100px] bg-[#eaddff]">
-                              <p className="p-[7px] w-10 h-10 absolute left-0 top-0 text-middle font-medium text-center text-[#21005d]">
+                              <p className="mt-[1px] p-[7px] w-10 h-10 absolute left-0 top-0 text-middle font-bold text-center text-[#21005d]">
                                 {i.ind}
                               </p>
                             </div>
@@ -314,22 +314,33 @@ export default function Home() {
                             </div>
                           </div>
                           <button
-                            className="flex-grow-0 flex-shrink-0 w-[20px] h-[20px] rounded-sm bg-[#6750A4] p-[2px] text-center"
+                            className="flex-grow-0 flex-shrink-0 w-[24px] h-[24px] rounded-sm bg-[#6750A4] text-center"
                             onClick={e => {
                               handleOnClick(e, i);
                               handleChange();
                             }}
                           >
-                            <svg
+                            {/* <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 16 16"
-                              width="16"
-                              height="16"
+                              // viewBox="0 0 24 24"
+                              width="24"
+                              height="24"
                               className="flex justify-center items-center flex-grow-0 flex-shrink-0"
                             >
                               <path
                                 className=" fill-white"
                                 d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+                              ></path>
+                            </svg> */}
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                className="fill-white"
+                                d="M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z"
                               ></path>
                             </svg>
                           </button>
