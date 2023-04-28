@@ -203,9 +203,9 @@ export default function Home() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     lsg = localStorage.getItem("todos");
-    console.log("asdasd");
-    console.log(lsg);
-    console.log(JSON.parse(localStorage.getItem("todos")!));
+    // console.log("asdasd");
+    // console.log(lsg);
+    // console.log(JSON.parse(localStorage.getItem("todos")!));
     // console.log(lsg);
   }, []);
 
@@ -275,16 +275,16 @@ export default function Home() {
           <div>
             {lsg
               ? JSON.parse(lsg).map((i: any, x: any) => {
-                  console.log(lsg);
-                  console.log(x, i.stat);
+                  // console.log(lsg);
+                  // console.log(x, i.stat);
                   return (
                     <div
                       key={i}
-                      className="text-center m-auto max-w-[250px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] bg-[#f9f3ff]"
+                      className="text-center m-auto max-w-[350px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] bg-[#f9f3ff]"
                     >
                       <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative">
                         {/* <div className="flex-grow-0 flex-shrink-0 w-[360px] h-14 absolute left-0 top-0" /> */}
-                        <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 h-14 gap-4 pl-4 pr-6 py-2">
+                        <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 min-h-[56px] gap-4 pl-4 pr-6 py-2">
                           <div className="flex flex-col justify-center items-start flex-grow-0 flex-shrink-0 relative overflow-hidden">
                             <div className="flex-grow-0 flex-shrink-0 w-10 h-10 relative overflow-hidden rounded-[100px] bg-[#eaddff]">
                               <p className="p-[7px] w-10 h-10 absolute left-0 top-0 text-middle font-medium text-center text-[#21005d]">
@@ -292,8 +292,8 @@ export default function Home() {
                               </p>
                             </div>
                           </div>
-                          <div className="flex flex-col justify-center items-start self-stretch flex-grow relative overflow-hidden">
-                            <p className="self-stretch flex-grow-0 flex-shrink-0 w-56 text-base text-left text-[#1d1b20] ml-4 ">
+                          <div className="flex flex-col justify-center items-start self-stretch flex-grow relative">
+                            <p className="self-stretch flex-grow-0 flex-shrink-0 text-base text-left text-[#1d1b20] ml-4 break-all">
                               {i.desc}
                             </p>
                           </div>
