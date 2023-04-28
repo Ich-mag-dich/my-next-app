@@ -2,6 +2,10 @@
 
 그런데 이제 정적 빌드를 곁들인,,
 
+#### Site
+
+<https://san02.duckdns.org>
+
 #### Install
 
 ```bash
