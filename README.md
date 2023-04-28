@@ -26,3 +26,20 @@ pnpm dev  # localhost:3000
 pnpm build && pnpm start
 # dist/ 폴더로 정적 빌드
 ```
+
+#### Next config
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+  output: "export",
+  trailingSlash: true,
+  distDir: "dist",
+  swcMinify: true,
+};
+
+module.exports = nextConfig;
+```
