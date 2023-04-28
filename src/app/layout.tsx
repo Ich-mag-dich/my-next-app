@@ -156,7 +156,7 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0  md:p-0 dark:text-white "
                     aria-current="page"
                   >
                     Home
@@ -166,7 +166,7 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/todo"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0  md:p-0 dark:text-white "
                   >
                     To do list
                   </Link>
@@ -175,7 +175,7 @@ export default function RootLayout({
                 <li>
                   <Link
                     href="/weather"
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#4f378b] md:p-0 dark:text-white md:dark:hover:text-[#4f378b] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0  md:p-0 dark:text-white "
                   >
                     Weather
                   </Link>

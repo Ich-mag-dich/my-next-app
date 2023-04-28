@@ -314,7 +314,7 @@ export default function Home() {
                             </div>
                           </div>
                           <button
-                            className="flex-grow-0 flex-shrink-0 w-[18px] h-[18px] rounded-sm bg-[#6750A4]"
+                            className="flex-grow-0 flex-shrink-0 w-[20px] h-[20px] rounded-sm bg-[#6750A4] p-[2px]"
                             onClick={e => {
                               handleOnClick(e, i);
                               handleChange();
@@ -323,8 +323,8 @@ export default function Home() {
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 16 16"
-                              width="18"
-                              height="18"
+                              width="16"
+                              height="16"
                               className="flex justify-center items-center flex-grow-0 flex-shrink-0"
                             >
                               <path
