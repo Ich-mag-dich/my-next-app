@@ -55,6 +55,17 @@
     "Helvetica Neue", sans-serif;
 }
 
+.box222 {
+  padding: 20px 10px;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: #d0bcff 0px 3px 6px 0px;
+  background: white;
+  font-family: Montserrat, source-code-pro, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
 .code {
   color: black;
 }
