@@ -57,7 +57,6 @@ export default function Home() {
       t.target.reset();
       localStorage.setItem("todos", JSON.stringify(localdata[0]));
     }
-    // console.log(localStorage.getItem("todos"));
   };
 
   var lgs: any;
@@ -137,7 +136,6 @@ export default function Home() {
     }
     if (localStorage.getItem("todos") === null) {
       try {
-        // localStorage.removeItem("todos");
         localStorage.setItem("todos", JSON.stringify(todos));
         statChange(i, e);
       } catch {}
@@ -205,21 +203,18 @@ export default function Home() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     lsg = localStorage.getItem("todos");
-    // console.log("asdasd");
-    // console.log(lsg);
-    // console.log(JSON.parse(localStorage.getItem("todos")!));
-    // console.log(lsg);
   }, []);
 
   const element = (lsg: any) => {
     if (checkSSR()) {
       return false;
     }
-    // console.log(Object.values(JSON.parse(lsg)));
     // try {
+
+    // SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data using
+    // => use 'Object.values'
+
     return Object.values(JSON.parse(lsg)).map((i: any, x: any) => {
-      // console.log(lsg);
-      // console.log(x, i.stat);
       return (
         <div
           key={i}
@@ -296,24 +291,11 @@ export default function Home() {
   };
   return (
     <main className="focus:outline-none">
-      {/* <div className="text-center">
-        <button
-          onClick={() => {
-            alert_length();
-          }}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          alert
-        </button>
-      </div> */}
-      {/* <h1 className="text-center">todo page!</h1> */}
-
       <form
         className="mx-auto text-center block mt-20 mb-10 h-[65.25px]"
         onSubmit={e => {
           e.preventDefault();
           add(e);
-          // console.log(e);
         }}
       >
         <div className="inline-block ">
