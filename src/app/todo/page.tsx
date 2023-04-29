@@ -200,6 +200,7 @@ export default function Home() {
   } catch {
     var lsg: any;
   }
+  const checkSSR = () => typeof window === "undefined";
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -210,6 +211,89 @@ export default function Home() {
     // console.log(lsg);
   }, []);
 
+  const element = (lsg: any) => {
+    if (checkSSR()) {
+      return false;
+    }
+    // console.log(Object.values(JSON.parse(lsg)));
+    // try {
+    return Object.values(JSON.parse(lsg)).map((i: any, x: any) => {
+      // console.log(lsg);
+      // console.log(x, i.stat);
+      return (
+        <div
+          key={i}
+          className="text-center m-auto max-w-[350px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] bg-[#f9f3ff]"
+        >
+          <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative">
+            {/* <div className="flex-grow-0 flex-shrink-0 w-[360px] h-14 absolute left-0 top-0" /> */}
+            <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 min-h-[56px] gap-4 pl-4 pr-6 py-2">
+              <div className="flex flex-col justify-center items-start flex-grow-0 flex-shrink-0 relative overflow-hidden">
+                <div className="flex-grow-0 flex-shrink-0 w-10 h-10 relative overflow-hidden rounded-[100px] bg-[#eaddff]">
+                  <p className="mt-[1px] p-[7px] w-10 h-10 absolute left-0 top-0 text-middle font-bold text-center text-[#21005d]">
+                    {i.ind}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-start self-stretch flex-grow relative">
+                <p className="self-stretch flex-grow-0 flex-shrink-0 text-base text-left text-[#1d1b20] ml-4 break-all">
+                  {i.desc}
+                </p>
+              </div>
+              <div
+                className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5"
+                onClick={e => {
+                  statChange(i, e);
+                }}
+              >
+                <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-6 h-6">
+                  <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative p-[11px] rounded-[100px]">
+                    <input
+                      type="checkbox"
+                      className="flex-grow-0 flex-shrink-0 w-[18px] h-[18px] rounded-sm accent-[#6750a4] checked:border-none checked:bg-[#6750a4] ring-0 focus:ring-0"
+                      checked={i.stat}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="flex-grow-0 flex-shrink-0 w-[24px] h-[24px] rounded-sm bg-[#6750A4] text-center"
+                onClick={e => {
+                  handleOnClick(e, i);
+                  handleChange();
+                }}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    className="fill-white"
+                    d="M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    });
+    // } catch (e: any) {
+    //   console.log(`qweqweqweqwe ${e}`);
+    //   return (
+    //     <div>
+    //       Something wrong..
+    //       <div>
+    //         {Object.values(e).map((x: any, i: any) => (
+    //           <p key={i}>{x}</p>
+    //         ))}
+    //       </div>
+    //     </div>
+    //   );
+    // }
+  };
   return (
     <main className="focus:outline-none">
       {/* <div className="text-center">
@@ -272,127 +356,7 @@ export default function Home() {
       <div className="box222 max-w-[390px] sm:max-w-[540px] md:max-w-[640px] lg:max-w-[740px]">
         {
           // todos?.length !== 0 && todos !== undefined
-          lsg ? (
-            <div>
-              {lsg
-                ? JSON.parse(lsg).map((i: any, x: any) => {
-                    // console.log(lsg);
-                    // console.log(x, i.stat);
-                    return (
-                      <div
-                        key={i}
-                        className="text-center m-auto max-w-[350px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] bg-[#f9f3ff]"
-                      >
-                        <div className="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative">
-                          {/* <div className="flex-grow-0 flex-shrink-0 w-[360px] h-14 absolute left-0 top-0" /> */}
-                          <div className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 min-h-[56px] gap-4 pl-4 pr-6 py-2">
-                            <div className="flex flex-col justify-center items-start flex-grow-0 flex-shrink-0 relative overflow-hidden">
-                              <div className="flex-grow-0 flex-shrink-0 w-10 h-10 relative overflow-hidden rounded-[100px] bg-[#eaddff]">
-                                <p className="mt-[1px] p-[7px] w-10 h-10 absolute left-0 top-0 text-middle font-bold text-center text-[#21005d]">
-                                  {i.ind}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="flex flex-col justify-center items-start self-stretch flex-grow relative">
-                              <p className="self-stretch flex-grow-0 flex-shrink-0 text-base text-left text-[#1d1b20] ml-4 break-all">
-                                {i.desc}
-                              </p>
-                            </div>
-                            <div
-                              className="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5"
-                              onClick={e => {
-                                statChange(i, e);
-                              }}
-                            >
-                              <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-6 h-6">
-                                <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative p-[11px] rounded-[100px]">
-                                  <input
-                                    type="checkbox"
-                                    className="flex-grow-0 flex-shrink-0 w-[18px] h-[18px] rounded-sm accent-[#6750a4] checked:border-none checked:bg-[#6750a4] ring-0 focus:ring-0"
-                                    checked={i.stat}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <button
-                              className="flex-grow-0 flex-shrink-0 w-[24px] h-[24px] rounded-sm bg-[#6750A4] text-center"
-                              onClick={e => {
-                                handleOnClick(e, i);
-                                handleChange();
-                              }}
-                            >
-                              {/* <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              // viewBox="0 0 24 24"
-                              width="24"
-                              height="24"
-                              className="flex justify-center items-center flex-grow-0 flex-shrink-0"
-                              >
-                              <path
-                              className=" fill-white"
-                              d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
-                              ></path>
-                            </svg> */}
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                              >
-                                <path
-                                  className="fill-white"
-                                  d="M5.72 5.72a.75.75 0 0 1 1.06 0L12 10.94l5.22-5.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L13.06 12l5.22 5.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L12 13.06l-5.22 5.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.94 12 5.72 6.78a.75.75 0 0 1 0-1.06Z"
-                                ></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      // <tr
-                      //   key={x}
-                      //   className="transition-all text-gray-600 dark:text-indigo-100 bg-gray-100 border-indigo-200 dark:bg-gray-700 dark:border-none font-['D2 coding']"
-                      // >
-                      //   <td className="border-none px-4 py-2 dark:border-none">
-                      //     {i.ind}
-                      //   </td>
-                      //   <td className="border-none px-4  py-2 text-left dark:border-none break-words max-w-[250px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[1000px]">
-                      //     {i.desc}
-                      //   </td>
-                      //   <td className="border-none px-4 py-4 dark:border-none">
-                      //     {/* <button>check</button> */}
-                      //     <div className=" m-auto">
-                      //       <input
-                      //         id="green-checkbox"
-                      //         type="checkbox"
-                      //         value=""
-                      //         className="w-4 h-4 "
-                      //       />
-                      //       {/* <label
-                      //       htmlFor="green-checkbox"
-                      //       className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                      //     >
-                      //       Check
-                      //     </label> */}
-                      //     </div>
-                      //   </td>
-                      //   <td className="border-none px-2 py-2 dark:border-none text-[12px]">
-                      //     <button
-                      //       className="bg-red-500 hover:bg-red-700 text-white  font-bold py-1 px-2 rounded"
-                      //       onClick={e => {
-                      //         handleOnClick(e, i);
-                      //       }}
-                      //     >
-                      //       X
-                      //     </button>
-                      //   </td>
-                      // </tr>
-                    );
-                  })
-                : null}
-            </div>
-          ) : (
-            <div></div>
-          )
+          lsg ? <div>{lsg ? element(lsg) : null}</div> : <div></div>
         }
       </div>
     </main>
