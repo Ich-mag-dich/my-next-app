@@ -209,7 +209,6 @@ export default function Home() {
     if (checkSSR()) {
       return false;
     }
-    // try {
 
     // SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data using
     // => use 'Object.values'
@@ -275,19 +274,6 @@ export default function Home() {
         </div>
       );
     });
-    // } catch (e: any) {
-    //   console.log(`qweqweqweqwe ${e}`);
-    //   return (
-    //     <div>
-    //       Something wrong..
-    //       <div>
-    //         {Object.values(e).map((x: any, i: any) => (
-    //           <p key={i}>{x}</p>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   );
-    // }
   };
   return (
     <main className="focus:outline-none">
@@ -336,10 +322,7 @@ export default function Home() {
         </div>
       </form>
       <div className="box222 max-w-[390px] sm:max-w-[540px] md:max-w-[640px] lg:max-w-[740px]">
-        {
-          // todos?.length !== 0 && todos !== undefined
-          lsg ? <div>{lsg ? element(lsg) : null}</div> : <div></div>
-        }
+        {lsg ? <div>{lsg ? element(lsg) : null}</div> : <div></div>}
       </div>
     </main>
   );
