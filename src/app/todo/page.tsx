@@ -241,10 +241,10 @@ export default function Home() {
                 }}
               >
                 <div className="cursor-pointer flex justify-center items-center flex-grow-0 flex-shrink-0 w-6 h-6">
-                  <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative p-[11px] rounded-[100px]">
+                  <div className="cursor-pointer flex justify-center items-center flex-grow-0 flex-shrink-0 relative p-[11px] rounded-[100px]">
                     <input
                       type="checkbox"
-                      className="flex-grow-0 flex-shrink-0 w-[18px] h-[18px] rounded-sm accent-[#6750a4] checked:border-none checked:bg-[#6750a4] ring-0 focus:ring-0"
+                      className="cursor-pointer flex-grow-0 flex-shrink-0 w-[18px] h-[18px] rounded-sm accent-[#6750a4] checked:border-none checked:bg-[#6750a4] ring-0 focus:ring-0"
                       checked={i.stat}
                     />
                   </div>
