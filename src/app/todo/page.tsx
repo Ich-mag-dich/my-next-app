@@ -99,7 +99,7 @@ export default function Home() {
       if (localStorage.getItem("todos") === null) {
         try {
           localStorage.removeItem("todos");
-        } catch {}
+        } catch { }
       } else {
         // console.log("qqqqqqqqqq");
         let qq: any = [];
@@ -138,7 +138,7 @@ export default function Home() {
       try {
         localStorage.setItem("todos", JSON.stringify(todos));
         statChange(i, e);
-      } catch {}
+      } catch { }
     } else {
       let qq: any = [];
 
@@ -240,7 +240,7 @@ export default function Home() {
                   statChange(i, e);
                 }}
               >
-                <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-6 h-6">
+                <div className="cursor-pointer flex justify-center items-center flex-grow-0 flex-shrink-0 w-6 h-6">
                   <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative p-[11px] rounded-[100px]">
                     <input
                       type="checkbox"
