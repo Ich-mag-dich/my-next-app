@@ -41,7 +41,7 @@ export default function RootLayout({
         />
         <title>San02</title>
       </head>
-      <body className="font-mono bg-white dark:bg-slate-800 text-slate-800 dark:text-white dark:border-gray-800 h-full">
+      <body className="font-mono font-bold bg-white dark:bg-slate-800 text-slate-800 dark:text-white dark:border-gray-800 h-full">
         <nav className="bg-[#eaddff]  dark:bg-gray-900 dark:border-gray-800">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
@@ -126,7 +126,7 @@ export default function RootLayout({
             <button
               data-collapse-toggle="navbar-solid-bg"
               type="button"
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none  dark:text-gray-400 "
+              className="font-bold inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none  dark:text-gray-400 "
               aria-controls="navbar-solid-bg"
               aria-expanded="false"
               onClick={() => {
@@ -155,7 +155,7 @@ export default function RootLayout({
                 chgVisl();
               }}
             >
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#eaddff] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#eaddff] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 tracking-tighter">
+              <ul className="font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#eaddff] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#eaddff] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
                 <li>
                   <Link
                     href="/"

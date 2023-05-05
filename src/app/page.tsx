@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <h1 className="text-center mt-32">hello world!</h1>
       <div className="text-center">
-        <div>
+        <div className="font-mono">
           <Link href="/todo">Click Me!</Link>
         </div>
         <div>

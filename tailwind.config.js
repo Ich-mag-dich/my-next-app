@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'mono': ['monospace', 'ui-monospace', 'SFMono-Regular', '"D2 coding"'],
+      'mono': ['ui-monospace', 'SFMono-Regular', '"D2 coding", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New"'],
     }
   },
   plugins: [
