@@ -183,6 +183,15 @@ export default function RootLayout({
                     Weather
                   </Link>
                 </li>
+                <p className="hidden md:block cursor-default">|</p>
+                <li>
+                  <Link
+                    href="/calendar"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded   md:border-0  md:p-0 dark:text-white "
+                  >
+                    calendar
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
