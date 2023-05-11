@@ -11,7 +11,7 @@
 ```bash
 git clone https://github.com/Ich-mag-dich/my-next-app.git
 cd my-next-app
-npm install
+pnpm install
 ```
 
 #### Dev
