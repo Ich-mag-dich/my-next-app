@@ -1,6 +1,6 @@
 # My next app
 
-그런데 이제 정적 빌드를 곁들인,,
+그런데 이제 서버사이드 렌더링이 아닌,,
 
 #### Site
 
@@ -23,8 +23,8 @@ pnpm dev  # localhost:3000
 #### Build
 
 ```bash
-pnpm build && pnpm start
-# dist/ 폴더로 정적 빌드
+pnpm build 
+# dist/ 폴더로 빌드
 ```
 
 #### Next config
