@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: AlmaLinux release 9.2
+    runs-on: AlmaLinux-release-9.2
 
     steps:
       - name: Deploy
@@ -20,11 +20,11 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd ~/devf/my-next-app
-            sudo pm2 stop 0
+            cd ~/deva/my-next-app
+            sudo /usr/local/bin/pm2 stop 0
             sudo git fetch --all
             sudo git reset --hard
             sudo git pull
-            sudo pnpm update
-            sudo pnpm build
-            sudo pm2 restart 0 --update-env
+            sudo /usr/local/bin/pnpm update
+            sudo /usr/local/bin/pnpm build
+            sudo /usr/local/bin/pm2 restart 0 --update-env
