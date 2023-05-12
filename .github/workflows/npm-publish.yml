@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: AlmaLinux release 9.2
 
     steps:
       - name: Deploy
@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd ~/devq/my-next-app
+            cd ~/devf/my-next-app
             sudo pm2 stop 0
             sudo git fetch --all
             sudo git reset --hard
