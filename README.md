@@ -1,6 +1,6 @@
 # My next app
 
-그런데 이제 서버사이드 렌더링이 아닌,,
+
 
 #### Site
 
@@ -11,19 +11,19 @@
 ```bash
 git clone https://github.com/Ich-mag-dich/my-next-app.git
 cd my-next-app
-pnpm install
+npm install
 ```
 
 #### Dev
 
 ```bash
-pnpm dev  # localhost:3000
+npm run dev  # localhost:3000
 ```
 
 #### Build
 
 ```bash
-pnpm build 
+npm run build 
 # dist/ 폴더로 빌드
 ```
 
